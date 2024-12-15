@@ -16,9 +16,10 @@ def download_file(url, filename= ''):
         for chunk in response.iter_content(chunk_size= 8192):
             file.write(chunk)
     
+# run the script
 if __name__ == '__main__':
     download_url = input("Enter the url: ").strip()
-    save_name = input("Enter a save name (leave blank to use default): ").strip()
+    save_name = input("Enter a save name (leave blank for default): ").strip()
     save_to = save_name if save_name else None
 
 
